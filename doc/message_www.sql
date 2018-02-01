@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-01-31 17:30:20
+Date: 2018-02-01 15:26:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -355,7 +355,8 @@ INSERT INTO `yii2_auth_item` VALUES ('group/add', '2', null, 'group/add', null, 
 INSERT INTO `yii2_auth_item` VALUES ('group/delete', '2', null, 'group/delete', null, '1476437986', '1476437986');
 INSERT INTO `yii2_auth_item` VALUES ('group/edit', '2', null, 'group/edit', null, '1476437986', '1476437986');
 INSERT INTO `yii2_auth_item` VALUES ('group/index', '2', null, 'group/index', null, '1476437986', '1476437986');
-INSERT INTO `yii2_auth_item` VALUES ('index/index', '2', '', 'index/index', '', '1356542542', '1425652320');
+INSERT INTO `yii2_auth_item` VALUES ('home/index', '2', '', 'home/index', '', '1356542542', '1425652320');
+INSERT INTO `yii2_auth_item` VALUES ('index/index', '2', null, 'index/index', null, '1517469179', '1517469179');
 INSERT INTO `yii2_auth_item` VALUES ('log/index', '2', null, 'log/index', null, '1472528090', '1472528090');
 INSERT INTO `yii2_auth_item` VALUES ('log/view', '2', null, 'log/view', null, '1472528090', '1472528090');
 INSERT INTO `yii2_auth_item` VALUES ('login/logout', '2', '', 'login/logout', '', '1356565230', '1452653210');
@@ -499,8 +500,9 @@ INSERT INTO `yii2_auth_item_child` VALUES ('administrator', 'group/edit');
 INSERT INTO `yii2_auth_item_child` VALUES ('editor', 'group/edit');
 INSERT INTO `yii2_auth_item_child` VALUES ('administrator', 'group/index');
 INSERT INTO `yii2_auth_item_child` VALUES ('editor', 'group/index');
-INSERT INTO `yii2_auth_item_child` VALUES ('administrator', 'index/index');
-INSERT INTO `yii2_auth_item_child` VALUES ('editor', 'index/index');
+INSERT INTO `yii2_auth_item_child` VALUES ('administrator', 'home/index');
+INSERT INTO `yii2_auth_item_child` VALUES ('editor', 'home/index');
+INSERT INTO `yii2_auth_item_child` VALUES ('Test', 'home/index');
 INSERT INTO `yii2_auth_item_child` VALUES ('Test', 'index/index');
 INSERT INTO `yii2_auth_item_child` VALUES ('administrator', 'menu/add');
 INSERT INTO `yii2_auth_item_child` VALUES ('administrator', 'menu/edit');
@@ -640,7 +642,8 @@ INSERT INTO `yii2_auth_rule` VALUES ('group/add', 'O:21:\"common\\core\\rbac\\Ru
 INSERT INTO `yii2_auth_rule` VALUES ('group/delete', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:12:\"group/delete\";s:9:\"createdAt\";i:1476437986;s:9:\"updatedAt\";i:1476437986;}', '1476437986', '1476437986');
 INSERT INTO `yii2_auth_rule` VALUES ('group/edit', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:10:\"group/edit\";s:9:\"createdAt\";i:1476437986;s:9:\"updatedAt\";i:1476437986;}', '1476437986', '1476437986');
 INSERT INTO `yii2_auth_rule` VALUES ('group/index', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:11:\"group/index\";s:9:\"createdAt\";i:1476437986;s:9:\"updatedAt\";i:1476437986;}', '1476437986', '1476437986');
-INSERT INTO `yii2_auth_rule` VALUES ('index/index', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:11:\"index/index\";s:9:\"createdAt\";i:1459148617;s:9:\"updatedAt\";i:1459148627;}', '1456542110', '1456542120');
+INSERT INTO `yii2_auth_rule` VALUES ('home/index', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:11:\"index/index\";s:9:\"createdAt\";i:1459148617;s:9:\"updatedAt\";i:1459148627;}', '1456542110', '1456542120');
+INSERT INTO `yii2_auth_rule` VALUES ('index/index', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:11:\"index/index\";s:9:\"createdAt\";i:1517469179;s:9:\"updatedAt\";i:1517469179;}', '1517469179', '1517469179');
 INSERT INTO `yii2_auth_rule` VALUES ('log/index', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:9:\"log/index\";s:9:\"createdAt\";i:1472528090;s:9:\"updatedAt\";i:1472528090;}', '1472528090', '1472528090');
 INSERT INTO `yii2_auth_rule` VALUES ('log/view', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:8:\"log/view\";s:9:\"createdAt\";i:1472528090;s:9:\"updatedAt\";i:1472528090;}', '1472528090', '1472528090');
 INSERT INTO `yii2_auth_rule` VALUES ('login/logout', 'O:21:\"common\\core\\rbac\\Rule\":3:{s:4:\"name\";s:12:\"login/logout\";s:9:\"createdAt\";i:1459148665;s:9:\"updatedAt\";i:1459148675;}', '1456542110', '1456542120');
@@ -1001,7 +1004,7 @@ CREATE TABLE `yii2_menu` (
 -- ----------------------------
 -- Records of yii2_menu
 -- ----------------------------
-INSERT INTO `yii2_menu` VALUES ('1', '首页', '0', '1', 'index/index', '0', '', '1');
+INSERT INTO `yii2_menu` VALUES ('1', '首页', '0', '1', 'home/index', '0', '', '1');
 INSERT INTO `yii2_menu` VALUES ('2', '内容', '0', '2', 'article/index', '1', '', '1');
 INSERT INTO `yii2_menu` VALUES ('3', '文章管理', '2', '2', 'article/index', '0', '文章管理|icon-note', '1');
 INSERT INTO `yii2_menu` VALUES ('4', '新增', '3', '0', 'article/add', '0', '', '1');
@@ -1074,7 +1077,7 @@ INSERT INTO `yii2_menu` VALUES ('138', '商品管理', '2', '20', 'goods/index',
 INSERT INTO `yii2_menu` VALUES ('119', '排序', '70', '0', 'Config/sort', '1', '', '1');
 INSERT INTO `yii2_menu` VALUES ('120', '排序', '75', '0', 'Menu/sort', '1', '', '1');
 INSERT INTO `yii2_menu` VALUES ('129', '管理员授权', '17', '0', 'admin/auth', '0', '', '0');
-INSERT INTO `yii2_menu` VALUES ('182', '主页信息', '1', '1', 'index/index', '0', '首页|icon-target', '1');
+INSERT INTO `yii2_menu` VALUES ('182', '主页信息', '1', '1', 'home/index', '0', '首页|icon-target', '1');
 INSERT INTO `yii2_menu` VALUES ('159', '广告管理', '2', '0', 'ad/index', '0', '广告管理|icon-target', '1');
 INSERT INTO `yii2_menu` VALUES ('160', '添加', '159', '0', 'ad/add', '0', '', '1');
 INSERT INTO `yii2_menu` VALUES ('161', '编辑', '159', '0', 'ad/edit', '0', '', '1');
