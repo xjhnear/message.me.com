@@ -8,6 +8,8 @@ use backend\models\search\MessageSearch;
 use common\helpers\ArrayHelper;
 use common\helpers\FuncHelper;
 use yii\web\NotFoundHttpException;
+use backend\models\UploadForm;
+use yii\web\UploadedFile;
 
 /**
  * 订单控制器
@@ -20,6 +22,10 @@ class MessageController extends BaseController
      * 列表页
      * ---------------------------------------
      */
+    public function init(){
+        $this->enableCsrfValidation = false;
+    }
+
     public function actionIndex()
     {
         /* 添加当前位置到cookie供后续跳转调用 */
@@ -181,6 +187,170 @@ class MessageController extends BaseController
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+
+    public function actionGetAjax(){
+        set_time_limit(0);
+        ini_set("memory_limit", "1024M");
+        ini_set("post_max_size", "100M");
+        ini_set("upload_max_filesize", "100M");
+        setlocale(LC_ALL, 'zh_CN');
+
+        $params=Yii::$app->request->post();
+
+        print_r($_FILES);exit;
+        $model = new UploadForm();
+        if (Yii::$app->request->isPost) {
+            $model->file = UploadedFile::getInstance($model, 'file');
+            if ($model->file && $model->validate()) {
+                if(!file_exists('data/upload/'.$uid))mkdir('data/upload/'.$uid);
+                $path='data/upload/';
+                if(!file_exists($path))mkdir($path);
+
+                $filename=$params['id'].'.' . $model->file->extension;
+                if($model->file->saveAs($path.$filename))
+                    return ["result"=>"Success","url"=>$path.$filename];
+
+                else return ["result"=>"Fail"];
+            }
+            return ["result"=>"ValidFail"];
+        }
+        return ["result"=>"PostFail"];
+        $params=Yii::$app->request->post();
+        print_r($params);exit;
+        if(!Input::hasFile('fileUpload'))
+            return json_encode(array('state'=>0,'msg'=>'文件不存在'));
+        $file = Input::file('fileUpload');
+        $tmpfile = $file->getRealPath();
+        $filename = $file->getClientOriginalName();
+        $ext = $file->getClientOriginalExtension();
+        if(!in_array($ext,array('csv','txt'))) return json_encode(array('state'=>0,'msg'=>'上传文件格式错误'));
+        $server_path = storage_path() . '/tmp/';
+        $newfilename = microtime() . '.' . $ext;
+        $target = $server_path . $newfilename;
+        $file->move($server_path,$newfilename);
+        $input = array();
+        $i_c = $unicom_c = $mobile_c = $telecom_c = 0;
+        if($category) {
+            $category_exists = Category::getInfoByName($category);
+            if ($category_exists) {
+                $category = $category_exists['category_id'];
+                $unicom_c = $category_exists['unicom'];
+                $mobile_c = $category_exists['mobile'];
+                $telecom_c = $category_exists['telecom'];
+                $i_c = $category_exists['count'];
+            } else {
+                $input['name'] = $category;
+                $re_category = Category::save($input);
+                $category = $re_category;
+                unset($input['name']);
+            }
+        }
+        if($batch_code) {
+            $info_exists = PhoneBatch::getInfoByCode($batch_code);
+            if ($info_exists) {
+                return json_encode(array('state'=>0,'msg'=>'批次Code已存在'));
+            } else {
+                $input['batch_code'] = $batch_code;
+                $input['category'] = $category;
+            }
+        } else {
+            return json_encode(array('state'=>0,'msg'=>'批次Code不能为空'));
+        }
+        $re_batch = PhoneBatch::save($input);
+
+
+        $handle = fopen($target, 'r');
+        $result = self::input_csv($handle); //解析csv
+        $len_result = count($result);
+        if($len_result==0){
+            return json_encode(array('state'=>0,'msg'=>'没有任何数据'));
+        }
+        $i = 0;
+        $j = 0;
+        $unicom = $mobile = $telecom = 0;
+//		$sql="INSERT IGNORE INTO m_phone_numbers (batch_id,phone_number,operator,city,address) VALUES"; //过滤重复数据
+        $sql="INSERT INTO m_phone_numbers (batch_id,phone_number,operator,city,address) VALUES";
+        for ($j = 1; $j < $len_result; $j++) { //循环获取各字段值
+            if(self::validateMobile($result[$j][0])!==true) {
+                $j++;
+                continue;
+            }
+            $phone_number = isset($result[$j][0])?self::characet($result[$j][0]):''; //中文转码
+            $phone_number_7 =  substr($phone_number,0,7);
+            if (isset($result[$j][1]) && $result[$j][1]<>"") {
+                $operator = self::characet($result[$j][1]);
+            } elseif (Redis::exists("isp_".$phone_number_7)) {
+                $operator = Redis::get("isp_".$phone_number_7);
+            } else {
+                $operator = '';
+            }
+            if (isset($result[$j][2]) && $result[$j][2]<>"") {
+                $city = self::characet($result[$j][2]);
+            } elseif (Redis::exists("province_".$phone_number_7)) {
+                $city = Redis::get("province_".$phone_number_7);
+            } else {
+                $city = '';
+            }
+            switch ($operator) {
+                case "联通":
+                    $unicom++;
+                    break;
+                case "移动":
+                    $mobile++;
+                    break;
+                case "电信":
+                    $telecom++;
+                    break;
+                case "虚拟/联通":
+                    $unicom++;
+                    break;
+                case "虚拟/移动":
+                    $mobile++;
+                    break;
+                case "虚拟/电信":
+                    $telecom++;
+                    break;
+            }
+            $address = isset($result[$j][3])?self::characet($result[$j][3]):'';
+            if ($phone_number==''&&$operator==''&&$city==''&&$address=='') continue;
+            $tmpstr = "'". $re_batch ."','". $phone_number ."','". $operator ."','". $city ."','". $address ."'";
+            $sql .= "(".$tmpstr."),";
+            $j++;
+        }
+        fclose($handle); //关闭指针
+        $sql = substr($sql,0,-1);   //去除最后的逗号
+        DB::insert($sql);
+
+        $search['batch_id'] = $re_batch;
+        $info_num_count = PhoneNumbers::getCount($search);
+        $i = $info_num_count;
+
+        if ($i == 0) {
+            PhoneBatch::del($re_batch);
+            return json_encode(array('state'=>0,'msg'=>'批次添加失败,所有导入数据均已存在'));
+        }
+        $data = array();
+        $data['batch_id'] = $re_batch;
+        $data['unicom'] = $unicom;
+        $data['mobile'] = $mobile;
+        $data['telecom'] = $telecom;
+        $data['count'] = $i;
+        $res = PhoneBatch::save($data);
+        $data_c = array();
+        $data_c['category_id'] = $category;
+        $data_c['count'] = $i_c + $i;
+        $data_c['unicom'] = $unicom_c + $unicom;
+        $data_c['mobile'] = $mobile_c + $mobile;
+        $data_c['telecom'] = $telecom_c + $telecom;
+        $res_c = Category::save($data_c);
+
+        if($res){
+            return json_encode(array("state"=>1,'msg'=>'批次添加成功,文件读取数据'.$j.'条,共实际导入数据'.$i.'条'));
+        }else{
+            return json_encode(array('state'=>0,'msg'=>'批次添加失败'));
         }
     }
 
