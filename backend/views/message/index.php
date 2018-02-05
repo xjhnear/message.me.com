@@ -65,7 +65,7 @@ $columns = [
         'buttons' => [
             'view' => function ($url, $model, $key) {
                 return Html::a('<i class="fa fa-eye"></i>', ['index', 'pid'=>$key], [
-                    'title' => Yii::t('app', '下级菜单'),
+                    'title' => Yii::t('app', '详细信息'),
                     'class' => 'btn btn-xs blue'
                 ]);
             },

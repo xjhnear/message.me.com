@@ -217,7 +217,7 @@ class MessageController extends BaseController
                 if($len_result==0){
                     return json_encode(array('state'=>0,'msg'=>'没有任何数据'));
                 }
-                $phone_number_arr = array();
+                $phone_number_arr = $phone_number_show = array();
                 $unicom = $mobile = $telecom = 0;
                 for ($j = 1; $j < $len_result; $j++) { //循环获取各字段值
                     if(self::validateMobile($result[$j][0])!==true) {
@@ -234,27 +234,36 @@ class MessageController extends BaseController
                     switch ($operator) {
                         case "联通":
                             $unicom++;
+                            $phone_number_arr['unicom'][] = $phone_number;
                             break;
                         case "移动":
                             $mobile++;
+                            $phone_number_arr['mobile'][] = $phone_number;
                             break;
                         case "电信":
                             $telecom++;
+                            $phone_number_arr['telecom'][] = $phone_number;
                             break;
                         case "虚拟/联通":
                             $unicom++;
+                            $phone_number_arr['unicom'][] = $phone_number;
                             break;
                         case "虚拟/移动":
                             $mobile++;
+                            $phone_number_arr['mobile'][] = $phone_number;
                             break;
                         case "虚拟/电信":
                             $telecom++;
+                            $phone_number_arr['telecom'][] = $phone_number;
+                            break;
+                        default:
+                            $phone_number_arr['other'][] = $phone_number;
                             break;
                     }
-                    $phone_number_arr[] = $phone_number;
+                    $phone_number_show = array_merge($phone_number_arr['unicom'],$phone_number_arr['mobile'],$phone_number_arr['telecom'],$phone_number_arr['other']);
                 }
                 fclose($handle); //关闭指针
-                return json_encode(array("state"=>1,'msg'=>'添加成功','phone'=>implode(',',$phone_number_arr)));
+                return json_encode(array("state"=>1,'msg'=>'添加成功','phone'=>implode(',',$phone_number_show),'phone_json'=>json_encode($phone_number_arr),'phone_count'=>array('all'=>count($phone_number_show),'unicom'=>$unicom,'mobile'=>$mobile,'telecom'=>$telecom)));
 
             } else {
                 return json_encode(array('state'=>0,'msg'=>'文件不存在'));
