@@ -22349,3 +22349,1220 @@ $_SERVER = [
     'BACKEND_PRETTY_URL' => 'true'
     'API_PRETTY_URL' => 'true'
 ]
+2018-02-05 03:00:09 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'mkdir(): No such file or directory' in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:210
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\MessageController->actionGetAjax()
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#6 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#7 {main}
+2018-02-05 03:00:08 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\php8777.tmp'
+        'error' => 0
+        'size' => 985002
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '985204'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryA7WJRgzFRoUMvKST'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '53404'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517799608.446
+    'REQUEST_TIME' => 1517799608
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 03:28:01 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:205
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#2 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#5 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#6 {main}
+2018-02-05 03:28:01 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\phpDC7.tmp'
+        'error' => 0
+        'size' => 985002
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '985204'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryXwZ1KSP9ESSxUWUJ'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517801281.184
+    'REQUEST_TIME' => 1517801281
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 03:29:29 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:206
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#2 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#5 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#6 {main}
+2018-02-05 03:29:28 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\php6376.tmp'
+        'error' => 0
+        'size' => 985002
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '985204'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryOutJYuoDbAxI2hAj'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '56285'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517801368.648
+    'REQUEST_TIME' => 1517801368
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 03:57:41 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'mkdir(): No such file or directory' in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:202
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\MessageController->actionGetAjax()
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#6 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#7 {main}
+2018-02-05 03:57:41 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\php354B.tmp'
+        'error' => 0
+        'size' => 985002
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '985204'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarysoXGjpbdsVphLzj4'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '59454'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517803060.764
+    'REQUEST_TIME' => 1517803060
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 06:53:11 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: backend\controllers\MessageController::characet()' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(230): yii\base\Component->__call('characet', Array)
+#1 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(230): backend\controllers\MessageController->characet('13329050908')
+#2 [internal function]: backend\controllers\MessageController->actionGetAjax()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-ajax', Array)
+#6 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('message/get-aja...', Array)
+#7 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#8 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#9 {main}
+2018-02-05 06:53:11 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\phpE2C3.tmp'
+        'error' => 0
+        'size' => 728
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '930'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryHI8ilaunT4LBvKoD'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '57383'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517813590.905
+    'REQUEST_TIME' => 1517813590
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 06:55:46 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\Redis' not found' in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:232
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#2 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#5 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#6 {main}
+2018-02-05 06:55:46 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\php3FC2.tmp'
+        'error' => 0
+        'size' => 728
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '930'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarypbaQaRO5QIrkp4as'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '57664'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517813745.767
+    'REQUEST_TIME' => 1517813745
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 07:04:15 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::redis' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\di\ServiceLocator.php(77): yii\base\Component->__get('redis')
+#1 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(200): yii\di\ServiceLocator->__get('redis')
+#2 [internal function]: backend\controllers\MessageController->actionGetAjax()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-ajax', Array)
+#6 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('message/get-aja...', Array)
+#7 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#8 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#9 {main}
+2018-02-05 07:04:15 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\php534.tmp'
+        'error' => 0
+        'size' => 728
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '930'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryWStGBwB3xpsJS4US'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '58762'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517814255.044
+    'REQUEST_TIME' => 1517814255
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 07:07:02 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\redis\Connection] Failed to open redis DB connection (localhost:6379, database=0): 10061 - ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+    in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:201
+    in D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php:201
+2018-02-05 07:07:02 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\db\Exception] exception 'yii\db\Exception' with message 'Failed to open redis DB connection (localhost:6379, database=0): 10061 - ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2-redis\Connection.php:565
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2-redis\Connection.php(665): yii\redis\Connection->open()
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2-redis\Connection.php(630): yii\redis\Connection->executeCommand('GET', Array)
+#2 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(201): yii\redis\Connection->__call('get', Array)
+#3 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(201): yii\redis\Connection->get('isp_1391743')
+#4 [internal function]: backend\controllers\MessageController->actionGetAjax()
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-ajax', Array)
+#8 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('message/get-aja...', Array)
+#9 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#10 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#11 {main}
+Additional Information:
+ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+2018-02-05 07:07:00 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = [
+    'fileUpload' => [
+        'name' => '1107.csv'
+        'type' => 'application/vnd.ms-excel'
+        'tmp_name' => 'D:\\wamp\\tmp\\php89EE.tmp'
+        'error' => 0
+        'size' => 728
+    ]
+]
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '930'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://message.me.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryURyUzccXdAuvj6Fu'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '59066'
+    'REDIRECT_URL' => '/message/get-ajax'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/message/get-ajax'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517814420.091
+    'REQUEST_TIME' => 1517814420
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 07:18:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/6a344d59/global/plugins/datatables/pdfmake.min.js.map".' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('assets/6a344d59...', Array)
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#2 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'é¡µé¢æœªæ‰¾åˆ°ã€‚' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#1 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#2 {main}
+2018-02-05 07:18:47 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '60375'
+    'REDIRECT_URL' => '/assets/6a344d59/global/plugins/datatables/pdfmake.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/assets/6a344d59/global/plugins/datatables/pdfmake.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517815126.988
+    'REQUEST_TIME' => 1517815126
+]
+2018-02-05 07:19:12 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: backend\models\Message::start_time' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\db\BaseActiveRecord.php(288): yii\base\Component->__get('start_time')
+#1 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(119): yii\db\BaseActiveRecord->__get('start_time')
+#2 [internal function]: backend\controllers\MessageController->actionEdit()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('edit', Array)
+#6 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('message/edit', Array)
+#7 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#8 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#9 {main}
+2018-02-05 07:19:12 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = [
+    'id' => '1'
+    '_pjax' => '#pjax-container'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        '__forward__' => -1
+    ]
+    '__id' => '1'
+    '__forward__' => '/message/index'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#pjax-container'
+    'HTTP_REFERER' => 'http://message.me.com/message/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '60426'
+    'REDIRECT_URL' => '/message/edit'
+    'REDIRECT_QUERY_STRING' => 'id=1&_pjax=%23pjax-container'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1&_pjax=%23pjax-container'
+    'REQUEST_URI' => '/message/edit?id=1&_pjax=%23pjax-container'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517815152.184
+    'REQUEST_TIME' => 1517815152
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 07:19:13 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: backend\models\Message::start_time' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\db\BaseActiveRecord.php(288): yii\base\Component->__get('start_time')
+#1 D:\wamp\www\near\near\message.me.com\backend\controllers\MessageController.php(119): yii\db\BaseActiveRecord->__get('start_time')
+#2 [internal function]: backend\controllers\MessageController->actionEdit()
+#3 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('edit', Array)
+#6 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('message/edit', Array)
+#7 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#8 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#9 {main}
+2018-02-05 07:19:13 [127.0.0.1][1][3bbhhtucluedngpujcmpspkl82][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        '__forward__' => -1
+    ]
+    '__id' => '1'
+    '__forward__' => '/message/index'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://message.me.com/message/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '60430'
+    'REDIRECT_URL' => '/message/edit'
+    'REDIRECT_QUERY_STRING' => 'id=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/message/edit?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517815152.792
+    'REQUEST_TIME' => 1517815152
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'prod'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=message_www'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => 'near'
+    'DB_TABLE_PREFIX' => 'yii2_'
+    'DB_CHARSET' => 'utf8'
+    'FRONTEND_URL' => '/'
+    'BACKEND_URL' => '/'
+    'API_URL' => '/api'
+    'STORAGE_URL' => '/storage'
+    'REDIS_HOST' => '127.0.0.1'
+    'REDIS_PASSWORD' => 'null'
+    'REDIS_PORT' => '6379'
+    'MAIL_ADMIN' => 'phphome@qq.com'
+    'MAIL_DRIVER' => 'smtp'
+    'MAIL_HOST' => 'smtp.163.com'
+    'MAIL_PORT' => '25'
+    'MAIL_USERNAME' => 'your_mail_username'
+    'MAIL_PASSWORD' => 'your_mail_password'
+    'MAIL_ENCRYPTION' => 'null'
+    'FRONTEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'BACKEND_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'API_COOKIE_VALIDATION_KEY' => '<generated_key>'
+    'FRONTEND_PRETTY_URL' => 'true'
+    'BACKEND_PRETTY_URL' => 'true'
+    'API_PRETTY_URL' => 'true'
+]
+2018-02-05 07:19:17 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/6a344d59/global/plugins/datatables/pdfmake.min.js.map".' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('assets/6a344d59...', Array)
+#1 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#2 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'é¡µé¢æœªæ‰¾åˆ°ã€‚' in D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\wamp\www\near\near\message.me.com\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(common\core\Request))
+#1 D:\wamp\www\near\near\message.me.com\backend\web\index.php(24): yii\base\Application->run()
+#2 {main}
+2018-02-05 07:19:17 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a:2:{i:0;s:9:\"_identity\";i:1;s:48:\"[\"1\",\"SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ\",2592000]\";}'
+    'PHPSESSID' => '3bbhhtucluedngpujcmpspkl82'
+    '_csrf' => 'd2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'message.me.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => '_identity=3b322c455ca87020434b8684ca164dc1b0f516572eeb8f16359f099650fe9c92a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B%221%22%2C%22SbSY36BLw3V2lU-GB7ZAzCVJKDFx82IJ%22%2C2592000%5D%22%3B%7D; PHPSESSID=3bbhhtucluedngpujcmpspkl82; _csrf=d2cb662536e50b4e6a099141423f78e99c6391762b6600e66550a2f1bf21aa6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BOJNTFeEnpyvhqW3ns6JTDD2E_3Yrmcb%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\bin;C:\\Program Files (x86)\\Java\\jdk1.8.0_144\\jre\\bin;E:\\dev\\apache-maven-3.5.0\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;D:\\instantclient;D:\\instantclient_32;D:\\wamp\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\node_global;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at message.me.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'message.me.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/near/near/message.me.com/backend/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/near/near/message.me.com/backend/web/index.php'
+    'REMOTE_PORT' => '60449'
+    'REDIRECT_URL' => '/assets/6a344d59/global/plugins/datatables/pdfmake.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/assets/6a344d59/global/plugins/datatables/pdfmake.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1517815157.085
+    'REQUEST_TIME' => 1517815157
+]

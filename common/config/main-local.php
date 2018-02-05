@@ -10,6 +10,12 @@ return [
             'charset'     => env('DB_CHARSET'),
             'tablePrefix' => env('DB_TABLE_PREFIX'),
         ],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+        ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',

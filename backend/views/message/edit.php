@@ -41,7 +41,7 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
             <div style="margin-bottom:5px;">
                 <span class="btn red btn-outline btn-file">
                     <span id="fileup" class="fileinput-new"> 上传文件 </span>
-                    <input id="fileUpload" type="file" name="fileUpload" style="display: none" />
+                    <input id="fileUpload" type="file" name="fileUpload" style="display: none" onchange="ajaxUploadFile()" />
                 </span>
             </div>
         </div>
@@ -106,38 +106,41 @@ function UploadFileOnSelect()
     // 打开文件选择框
     var input = document.getElementById("fileUpload");
     input.click();
-    // 提交完毕后初始化 form
-    // $('#formUpload').resetForm();
-    // console.log('selected file ' + input.value);
 }
 
-// form 内的文件选择内容被改变则立即提交
-$('#fileUpload').on('change', function()
+function ajaxUploadFile()
 {
     // 当 file 框内容改变则提交 form
     // $('#formUpload').submit();
 
     var token = "<?php echo \Yii::$app->request->getCsrfToken()?>";
-    $.ajaxFileUpload({
-        url: '/message/get-ajax',
-        secureuri: false,
-        data:{_csrf: token},
-        fileElementId:'fileUpload',
-        dataType: 'json',
-        success: function (data, status) {
-        if ($(data).find("result").text() == 'Success') {
-        //上传成功
-        }
-        else{
-        alert("上传失败");
-        }
-        },
-        error: function (data, status, e) {
-        return;
-        }
-    });
+    //$("#jUploadFormfileUpload").remove();
+    var type=$("input[name='type']:checked").val();
+    var formId = 'jUploadForm' + 'fileUpload';  //file为input的id
+    var test1 = jQuery('#'+formId);
+    console.log("1:"+test1.prop("outerHTML"));//打印输出
 
-});
+    $.ajaxFileUpload({
+    url: '/message/get-ajax',
+    secureuri: false,
+    cache:false,
+    data:{_csrf: token},
+    fileElementId:'fileUpload',
+    dataType: 'json',
+    success: function (data) {
+    if (data.state) {
+    //上传成功
+    document.getElementById("message-phonenumbers").innerHTML = data.phone;
+    $('form')[0].reset();
+    } else {
+    alert(data.msg);
+    }
+    },
+    error: function (data, status, e) {
+    return;
+    }
+    });
+}
 
 
 <?php $this->endBlock() ?>
