@@ -37,7 +37,7 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
         ]); ?>
 
         <div class="form-group field-message-phonenumbers">
-            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-7" name="Message[phonenumbers]" rows="5"></textarea><span class="help-block"></span>
+            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-7" name="Message[phonenumbers]" rows="5"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
             <div style="margin-bottom:5px;">
                 <span class="btn red btn-outline btn-file">
                     <span id="fileup" class="fileinput-new"> 上传文件 </span>
@@ -47,7 +47,7 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
         </div>
 
         <div class="form-group field-message-content">
-            <div><label class="" for="message-content">短信内容</label><span class="help-inline"></span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="5" onkeyup="checkLen(this)"></textarea><span class="help-block"></span>
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline"></span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="5" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count">0</span> 个文字</div>
         </div>
 
@@ -85,6 +85,7 @@ AppAsset::addScript($this,'static/js/ajaxfileupload.js');
 $(function() {
     /* 子导航高亮 */
     highlight_subnav('message/add');
+    checkLen(document.getElementById("message-content"))
 });
 
 // 短信内容字数统计

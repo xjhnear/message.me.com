@@ -47,7 +47,7 @@ class MessageList extends \common\core\BaseActiveRecord
         return [
             [['phonenumbers', 'content', 'send_time', 'create_time'], 'required'],
             [['send_time', 'create_time', 'status'], 'integer'],
-            [['phonenumbers', 'content'], 'string']
+            [['phonenumbers', 'content', 'message_code'], 'string']
         ];
     }
 
@@ -58,6 +58,7 @@ class MessageList extends \common\core\BaseActiveRecord
     {
         return [
             'message_id' => 'Message ID',
+            'message_code' => 'Message Code',
             'phonenumbers' => 'Phonenumbers',
             'content' => 'Content',
             'send_time' => 'Send Time',

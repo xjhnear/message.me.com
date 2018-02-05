@@ -24,7 +24,7 @@ class MessageSearch extends Message
     {
         return [
             [['message_id', 'send_time', 'create_time', 'status'], 'integer'],
-            [['phonenumbers', 'content'], 'safe'],
+            [['phonenumbers', 'content', 'message_code'], 'safe'],
         ];
     }
 
@@ -68,6 +68,11 @@ class MessageSearch extends Message
         /* 基本搜索 */
         $query->andFilterWhere([
             'status' => $this->status,
+        ]);
+
+        /* 商品名 */
+        $query->andFilterWhere([
+            'like', 'message_code', $this->message_code,
         ]);
 
         /* 时间搜索 */

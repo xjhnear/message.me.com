@@ -30,10 +30,16 @@ $columns = [
         'options' => ['width' => '50px;']
     ],
     [
+        'header' => '批次号',
+        'value' => 'message_code',
+        'options' => ['width' => '50px;'],
+        'filter' => Html::input('text', 'MessageSearch[message_code]', $searchModel->message_code, ['class'=>'form-control'])
+    ],
+    [
         'header' => '发送时间',
         'value' => 'send_time',
-        'format' => ['date', 'php:Y-m-d'],
-        'options' => ['width' => '100px;'],
+        'format' => ['date', 'php:Y-m-d H:i:s'],
+        'options' => ['width' => '150px;'],
     ],
     [
         'label' => '状态',
@@ -54,9 +60,15 @@ $columns = [
     [
         'class' => 'yii\grid\ActionColumn',
         'header' => '操作',
-        'template' => '{edit} {delete}',
+        'template' => '{view} {edit} {delete}',
         'options' => ['width' => '200px;'],
         'buttons' => [
+            'view' => function ($url, $model, $key) {
+                return Html::a('<i class="fa fa-eye"></i>', ['index', 'pid'=>$key], [
+                    'title' => Yii::t('app', '下级菜单'),
+                    'class' => 'btn btn-xs blue'
+                ]);
+            },
             'edit' => function ($url, $model, $key) {
                 return Html::a('<i class="fa fa-edit"></i>', $url, [
                     'title' => Yii::t('app', '编辑'),

@@ -58,6 +58,7 @@ class MessageController extends BaseController
         if (Yii::$app->request->isPost) {
 
             $data = Yii::$app->request->post('Message');
+            $data['message_code'] = 'M'.time();
             $data['send_time'] = strtotime($data['send_time']);
             /* 格式化extend值，为空或数组序列化 */
             if (isset($data['extend'])) {
@@ -96,10 +97,7 @@ class MessageController extends BaseController
 
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post('Message');//var_dump($data);exit();
-            //$data['update_time'] = time();
-            $data['start_time'] = strtotime($data['start_time']);
-            $data['end_time'] = strtotime($data['end_time']);
-            $data['pay_time'] = strtotime($data['pay_time']);
+            $data['send_time'] = strtotime($data['send_time']);
             /* 格式化extend值，为空或数组序列化 */
             if (isset($data['extend'])) {
                 $tmp = FuncHelper::parse_field_attr($data['extend']);
@@ -116,8 +114,7 @@ class MessageController extends BaseController
                 $this->error('操作错误');
             }
         }
-        $model->start_time = date('Y-m-d H:i', $model->start_time);
-        $model->end_time = date('Y-m-d H:i', $model->end_time);
+        $model->send_time = date('Y-m-d H:i', $model->send_time);
         /* 渲染模板 */
         return $this->render('edit', [
             'model' => $model,
