@@ -5,7 +5,7 @@ use yii\grid\GridView;
 
 /* @var $model common\modelsgii\Message */
 /* @var $dataProvider yii\data\ActiveDataProvider  */
-/* @var $searchModel backend\models\search\MessageSearch */
+/* @var $searchModel backend\models\search\MessageDetailSearch */
 
 /* ===========================以下为本页配置信息================================= */
 /* 页面基本属性 */
@@ -26,14 +26,20 @@ $columns = [
     ],
     [
         'header' => 'ID',
-        'value' => 'message_id',
+        'value' => 'message_did',
         'options' => ['width' => '50px;']
     ],
     [
         'header' => '批次号',
         'value' => 'message_code',
         'options' => ['width' => '50px;'],
-        'filter' => Html::input('text', 'MessageSearch[message_code]', $searchModel->message_code, ['class'=>'form-control'])
+        'filter' => Html::input('text', 'MessageDetailSearch[message_code]', $searchModel->message_code, ['class'=>'form-control'])
+    ],
+    [
+        'header' => '手机号',
+        'value' => 'phonenumber',
+        'options' => ['width' => '50px;'],
+        'filter' => Html::input('text', 'MessageDetailSearch[phonenumber]', $searchModel->phonenumber, ['class'=>'form-control'])
     ],
     [
         'header' => '发送时间',
@@ -52,23 +58,11 @@ $columns = [
 
     ],
     [
-        'label' => '创建时间',
-        'value' => 'create_time',
-        'options' => ['width' => '150px;'],
-        'format' =>  ['date', 'php:Y-m-d H:i']
-    ],
-    [
         'class' => 'yii\grid\ActionColumn',
         'header' => '操作',
-        'template' => '{view} {edit} {delete}',
+        'template' => '{edit} {delete}',
         'options' => ['width' => '200px;'],
         'buttons' => [
-            'view' => function ($url, $model, $key) {
-                return Html::a('<i class="fa fa-eye"></i>', ['detail', 'pid'=>$key], [
-                    'title' => Yii::t('app', '详细信息'),
-                    'class' => 'btn btn-xs blue'
-                ]);
-            },
             'edit' => function ($url, $model, $key) {
                 return Html::a('<i class="fa fa-edit"></i>', $url, [
                     'title' => Yii::t('app', '编辑'),
@@ -92,7 +86,7 @@ $columns = [
     <div class="portlet-title">
         <div class="caption">
             <i class="icon-settings font-dark"></i>
-            <span class="caption-subject font-dark sbold uppercase">短信列表</span>
+            <span class="caption-subject font-dark sbold uppercase">详细信息</span>
         </div>
         <div class="actions">
             <div class="btn-group btn-group-devided">

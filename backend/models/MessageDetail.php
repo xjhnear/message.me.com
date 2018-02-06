@@ -28,13 +28,13 @@ class MessageDetail extends \common\modelsgii\MessageDetail
     {
         return [
             /* 在rules验证前，时间自动完成 */
-            [
-                'class' => 'yii\behaviors\AttributeBehavior',
-                'attributes' => [
-                    static::EVENT_BEFORE_VALIDATE => 'create_time',
-                ],
-                'value' => time(),
-            ],
+//            [
+//                'class' => 'yii\behaviors\AttributeBehavior',
+//                'attributes' => [
+//                    static::EVENT_BEFORE_VALIDATE => 'create_time',
+//                ],
+//                'value' => time(),
+//            ],
         ];
     }
 }

@@ -48,12 +48,12 @@ class MessageDetailSearch extends MessageDetail
     {
         //$params = $params ? : Yii::$app->request->getQueryParams();
         
-        $query = Message::find()->orderBy('message_did DESC')->asArray();
+        $query = MessageDetail::find()->orderBy('message_did DESC')->asArray();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
-                'pageSize' => 2,
+                'pageSize' => 10,
             ],
         ]);
 
@@ -73,6 +73,10 @@ class MessageDetailSearch extends MessageDetail
         /* 商品名 */
         $query->andFilterWhere([
             'like', 'phonenumber', $this->phonenumber,
+        ]);
+
+        $query->andFilterWhere([
+            'like', 'message_code', $this->message_code,
         ]);
 
         /* 时间搜索 */

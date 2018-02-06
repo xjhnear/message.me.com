@@ -43,6 +43,7 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
                     <span id="fileup" class="fileinput-new"> 上传文件 </span>
                     <input id="fileUpload" type="file" name="fileUpload" style="display: none" onchange="ajaxUploadFile()" />
                 </span>
+                <div class="help-inline" id="phone_msg" style="display: none;">共导入 <span id="phone_count">0</span> 个号码 (联通: <span id="phone_count_unicom">0</span> 个 移动: <span id="phone_count_mobile">0</span> 个 电信: <span id="phone_count_telecom">0</span> 个)</div>
             </div>
         </div>
 
@@ -116,10 +117,10 @@ function ajaxUploadFile()
 
     var token = "<?php echo \Yii::$app->request->getCsrfToken()?>";
     //$("#jUploadFormfileUpload").remove();
-    var type=$("input[name='type']:checked").val();
-    var formId = 'jUploadForm' + 'fileUpload';  //file为input的id
-    var test1 = jQuery('#'+formId);
-    console.log("1:"+test1.prop("outerHTML"));//打印输出
+    //var type=$("input[name='type']:checked").val();
+    //var formId = 'jUploadForm' + 'fileUpload';  //file为input的id
+    //var test1 = jQuery('#'+formId);
+    //console.log("1:"+test1.prop("outerHTML"));//打印输出
 
     $.ajaxFileUpload({
     url: '/message/get-ajax',
@@ -132,6 +133,11 @@ function ajaxUploadFile()
     if (data.state) {
     //上传成功
     document.getElementById("message-phonenumbers").innerHTML = data.phone;
+    document.getElementById("phone_count").innerHTML = data.phone_count.all;
+    document.getElementById("phone_count_unicom").innerHTML = data.phone_count.unicom;
+    document.getElementById("phone_count_mobile").innerHTML = data.phone_count.mobile;
+    document.getElementById("phone_count_telecom").innerHTML = data.phone_count.telecom;
+    $("#phone_msg").show();
     $('form')[0].reset();
     } else {
     alert(data.msg);

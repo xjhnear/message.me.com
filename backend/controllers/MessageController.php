@@ -49,6 +49,28 @@ class MessageController extends BaseController
         ]);
     }
 
+    public function actionDetail()
+    {
+        /* 添加当前位置到cookie供后续跳转调用 */
+        $this->setForward();//phpinfo();
+
+        $params = Yii::$app->request->getQueryParams();
+
+        $searchModel = new MessageDetailSearch();
+        $dataProvider = $searchModel->search($params); //var_dump($dataProvider->query->all());exit();
+
+        /* 导出excel */
+        if (isset($params['action']) && $params['action'] == 'export') {
+            $this->export($dataProvider->query->all());
+            return false;
+        }
+
+        return $this->render('detail', [
+            'dataProvider' => $dataProvider,
+            'searchModel' => $searchModel,
+        ]);
+    }
+
     /**
      * ---------------------------------------
      * 添加
@@ -62,6 +84,9 @@ class MessageController extends BaseController
             $data = Yii::$app->request->post('Message');
             $data['message_code'] = 'M'.time();
             $data['send_time'] = strtotime($data['send_time']);
+            $phonenumbers = $data['phonenumbers'];
+            $phonenumbers_arr = explode(',',$phonenumbers);
+            $data['count'] = count($phonenumbers_arr);
             /* 格式化extend值，为空或数组序列化 */
             if (isset($data['extend'])) {
                 $tmp = FuncHelper::parse_field_attr($data['extend']);
@@ -72,7 +97,19 @@ class MessageController extends BaseController
                 }
             }
             /* 表单数据加载、验证、数据库操作 */
-            if ($this->saveRow($model, $data)) {
+            if ($r = $this->saveRow($model, $data)) {
+                $model_d = new MessageDetail();
+                foreach($phonenumbers_arr as $phonenumber)
+                {
+                    $attributes = array();
+                    $attributes['phonenumber'] = $phonenumber;
+                    $attributes['message_id'] = $r->message_id;
+                    $attributes['message_code'] = $data['message_code'];
+                    $attributes['send_time'] = $data['send_time'];
+                    $_model_d = clone $model_d;
+                    $this->saveRow($_model_d, $attributes);
+                }
+
                 $this->success('操作成功', $this->getForward());
             } else {
                 $this->error('操作错误');
@@ -221,6 +258,7 @@ class MessageController extends BaseController
                 }
                 $phone_number_arr = $phone_number_show = array();
                 $unicom = $mobile = $telecom = 0;
+                $phone_number_arr['unicom'] = $phone_number_arr['mobile'] = $phone_number_arr['telecom'] = $phone_number_arr['other'] = array();
                 for ($j = 1; $j < $len_result; $j++) { //循环获取各字段值
                     if(self::validateMobile($result[$j][0])!==true) {
                         continue;
@@ -313,6 +351,22 @@ class MessageController extends BaseController
             }
         }
         return $data;
+    }
+
+    public function getUpdateRedis()
+    {
+        set_time_limit(0);
+        ini_set("memory_limit", "1024M");
+        ini_set("post_max_size", "100M");
+        ini_set("upload_max_filesize", "100M");
+        setlocale(LC_ALL, 'zh_CN');
+        $sql="SELECT phone,province,isp FROM m_phone_model";
+        $number_model = DB::select($sql);
+        foreach ($number_model as $number_model_item) {
+            Redis::set("province_".$number_model_item['phone'],$number_model_item['province']);
+            Redis::set("isp_".$number_model_item['phone'],$number_model_item['isp']);
+        }
+        print_r("done!!!");exit;
     }
 
 }
