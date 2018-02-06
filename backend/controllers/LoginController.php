@@ -33,7 +33,7 @@ class LoginController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error', 'logout'],
+                        'actions' => ['login', 'error', 'logout', 'get-ajax'],
                         'allow' => true,
                     ],
                 ],
