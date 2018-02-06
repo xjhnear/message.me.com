@@ -5,6 +5,8 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Message;
 use backend\models\search\MessageSearch;
+use backend\models\MessageDetail;
+use backend\models\search\MessageDetailSearch;
 use common\helpers\ArrayHelper;
 use common\helpers\FuncHelper;
 use yii\web\NotFoundHttpException;
@@ -148,7 +150,7 @@ class MessageController extends BaseController
             ->orderBy('message_id DESC')
             ->asArray()->all();*/
         $arr = [];
-        $title = ['message_id', '订单号', '用户ID', '姓名', '电话', '身份证', '商品类型', '套餐ID', '商品ID', '商品名', '起租时间', '退租时间',
+        $title = ['ID', '批次号', '发送时间', '状态', '创建时间', '身份证', '商品类型', '套餐ID', '商品ID', '商品名', '起租时间', '退租时间',
             '数量', '价格', '支付状态', '支付时间', '支付类型', '支付途径', '下单时间', '状态'];
         if ($data) {
             foreach ($data as $key => $value) {

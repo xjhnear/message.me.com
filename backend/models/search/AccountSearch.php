@@ -24,7 +24,7 @@ class AccountSearch extends Account
     {
         return [
             [['recharge_count', 'create_time', 'consume_count', 'fail_count'], 'integer'],
-            [['c_date'], 'safe'],
+            [['c_date'], 'string'],
         ];
     }
 

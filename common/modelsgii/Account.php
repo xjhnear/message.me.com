@@ -57,7 +57,7 @@ class Account extends \common\core\BaseActiveRecord
     public function attributeLabels()
     {
         return [
-            'report_id' => 'Report ID',
+            'account_id' => 'Account ID',
             'c_date' => 'C Date',
             'recharge_count' => 'Recharge Count',
             'consume_count' => 'Consume Count',

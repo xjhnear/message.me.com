@@ -29,14 +29,14 @@ use Yii;
  * @property integer $create_time
  * @property integer $status
  */
-class MessageList extends \common\core\BaseActiveRecord
+class MessageDetail extends \common\core\BaseActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%message_list}}';
+        return '{{%message_detail}}';
     }
 
     /**
@@ -45,9 +45,9 @@ class MessageList extends \common\core\BaseActiveRecord
     public function rules()
     {
         return [
-            [['phonenumbers', 'content', 'send_time'], 'required'],
-            [['create_time', 'check_time', 'status', 'count'], 'integer'],
-            [['phonenumbers', 'content', 'message_code', 'create_name', 'check_name'], 'string']
+            [['phonenumber', 'message_id', 'message_code'], 'required'],
+            [['message_id', 'send_time', 'return_time', 'status'], 'integer'],
+            [['phonenumber', 'message_code'], 'string']
         ];
     }
 
@@ -57,17 +57,14 @@ class MessageList extends \common\core\BaseActiveRecord
     public function attributeLabels()
     {
         return [
+            'message_did' => 'Message DID',
+            'phonenumber' => 'Phonenumber',
             'message_id' => 'Message ID',
             'message_code' => 'Message Code',
-            'phonenumbers' => 'Phonenumbers',
-            'count' => 'Count',
-            'content' => 'Content',
             'send_time' => 'Send Time',
-            'create_time' => 'Create Time',
-            'check_time' => 'Check Time',
+            'return_time' => 'Return Time',
             'status' => 'Status',
-            'create_name' => 'Create Name',
-            'check_name' => 'Check Name',
+            'channel_id' => 'Channel ID',
         ];
     }
 }

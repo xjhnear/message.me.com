@@ -6,12 +6,12 @@ use backend\models\User;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Message;
+use backend\models\MessageDetail;
 
 /**
  * MessageSearch represents the model behind the search form about `backend\models\Message`.
  */
-class MessageSearch extends Message
+class MessageDetailSearch extends MessageDetail
 {
 
     public $from_date; // 搜索开始时间
@@ -23,8 +23,8 @@ class MessageSearch extends Message
     public function rules()
     {
         return [
-            [['create_time', 'check_time', 'status', 'count'], 'integer'],
-            [['phonenumbers', 'content', 'message_code', 'create_name', 'check_name'], 'string']
+            [['message_id', 'send_time', 'return_time', 'status'], 'integer'],
+            [['phonenumber', 'message_code'], 'string']
         ];
     }
 
@@ -48,7 +48,7 @@ class MessageSearch extends Message
     {
         //$params = $params ? : Yii::$app->request->getQueryParams();
         
-        $query = Message::find()->orderBy('message_id DESC')->asArray();
+        $query = Message::find()->orderBy('message_did DESC')->asArray();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -72,7 +72,7 @@ class MessageSearch extends Message
 
         /* 商品名 */
         $query->andFilterWhere([
-            'like', 'message_code', $this->message_code,
+            'like', 'phonenumber', $this->phonenumber,
         ]);
 
         /* 时间搜索 */
@@ -86,7 +86,7 @@ class MessageSearch extends Message
         
         /* 排序 */
         $query->orderBy([
-            'message_id' => SORT_DESC,
+            'message_did' => SORT_DESC,
         ]);
 
         return $dataProvider;

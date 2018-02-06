@@ -9,15 +9,15 @@ use Yii;
  * 文章模型
  * ---------------------------------------
  */
-class Message extends \common\modelsgii\MessageList
+class MessageDetail extends \common\modelsgii\MessageDetail
 {
 
     public function rules()
     {
         return [
-            [['phonenumbers', 'content', 'send_time'], 'required'],
-            [['create_time', 'check_time', 'status', 'count'], 'integer'],
-            [['phonenumbers', 'content', 'message_code', 'create_name', 'check_name'], 'string']
+            [['phonenumber', 'message_id', 'message_code'], 'required'],
+            [['message_id', 'send_time', 'return_time', 'status'], 'integer'],
+            [['phonenumber', 'message_code'], 'string']
         ];
     }
 
