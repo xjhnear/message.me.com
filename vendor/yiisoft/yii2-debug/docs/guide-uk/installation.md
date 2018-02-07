@@ -86,7 +86,7 @@ return [
 наступного рядка у файлі `index.php`:
 
 ```php
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_DEBUG') or define('YII_DEBUG', true);
 ```
 
 > Примітка: Переконайтеся, що режим налагодження вимкнений у робочому середовищі, оскільки це може зробити істотний несприятливий для швидкодії

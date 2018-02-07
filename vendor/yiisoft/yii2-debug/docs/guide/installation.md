@@ -88,7 +88,7 @@ By default, the trace level is automatically set to `3` if Yii is running in deb
 the following line in your `index.php` file:
 
 ```php
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_DEBUG') or define('YII_DEBUG', true);
 ```
 
 > Note: Make sure to disable debug mode in production environments since it may have a significant and adverse performance
