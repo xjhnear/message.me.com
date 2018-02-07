@@ -51,21 +51,6 @@ $columns = [
         'options' => ['width' => '150px;'],
         'format' =>  ['date', 'php:Y-m-d H:i']
     ],
-    [
-        'class' => 'yii\grid\ActionColumn',
-        'header' => '操作',
-        'template' => '{edit} {delete}',
-        'options' => ['width' => '200px;'],
-        'buttons' => [
-            'edit' => function ($url, $model, $key) {
-                return Html::a('<i class="fa fa-edit"></i>', $url, [
-                    'title' => Yii::t('app', '查看'),
-                    'class' => 'btn btn-xs purple'
-                ]);
-            },
-        ],
-        'headerOptions' => [],
-    ],
 ];
 
 ?>

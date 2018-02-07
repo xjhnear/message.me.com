@@ -1,5 +1,4 @@
 <?php
-error_reporting (0);
 
 require(__DIR__ . '/../../vendor/autoload.php');
 
@@ -22,4 +21,5 @@ $config = yii\helpers\ArrayHelper::merge(
     require(__DIR__ . '/../config/main-local.php')
 );
 
+error_reporting (0);
 (new yii\web\Application($config))->run();

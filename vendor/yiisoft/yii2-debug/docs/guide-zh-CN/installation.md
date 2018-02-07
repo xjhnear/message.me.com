@@ -88,7 +88,7 @@ return [
 以下行的存在而决定：
 
 ```php
-defined('YII_DEBUG') or define('YII_DEBUG', true);
+// defined('YII_DEBUG') or define('YII_DEBUG', true);
 ```
 
 > 注意：确保在生产环境中禁用调试模式，因为它可能有显著和不利的性能效果。

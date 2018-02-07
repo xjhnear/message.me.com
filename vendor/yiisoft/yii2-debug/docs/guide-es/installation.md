@@ -86,7 +86,7 @@ Por defecto, el nivel de traza es automáticamente asignado a `3` si Yii se est�
 determinado por la presencia de la siguiente linea en tu fichero `index.php`:
 
 ```php
-defined('YII_DEBUG') or define('YII_DEBUG', true);
+// defined('YII_DEBUG') or define('YII_DEBUG', true);
 ```
 
 > Nota: Asegúrate de deshabilitar el modo depuración en entornos de producción ya que puede tener un efecto significativo
