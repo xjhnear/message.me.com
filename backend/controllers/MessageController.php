@@ -168,7 +168,7 @@ class MessageController extends BaseController
     public function actionDelete()
     {
         $model = $this->findModel(0);
-        if ($this->delRow($model, 'id')) {
+        if ($this->delRow($model, 'message_id')) {
             $this->success('删除成功', $this->getForward());
         } else {
             $this->error('删除失败！');
@@ -360,11 +360,14 @@ class MessageController extends BaseController
         ini_set("post_max_size", "100M");
         ini_set("upload_max_filesize", "100M");
         setlocale(LC_ALL, 'zh_CN');
-        $sql="SELECT phone,province,isp FROM m_phone_model";
-        $number_model = DB::select($sql);
+        $db = Yii::$app->db;
+        $sql = "SELECT phone,province,isp FROM yii2_phone_model";
+        $command = $db->createCommand($sql);
+        $number_model = $command->queryAll();
+        $redis = Yii::$app->redis;
         foreach ($number_model as $number_model_item) {
-            Redis::set("province_".$number_model_item['phone'],$number_model_item['province']);
-            Redis::set("isp_".$number_model_item['phone'],$number_model_item['isp']);
+            $redis->set("province_".$number_model_item['phone'],$number_model_item['province']);
+            $redis->set("isp_".$number_model_item['phone'],$number_model_item['isp']);
         }
         print_r("done!!!");exit;
     }

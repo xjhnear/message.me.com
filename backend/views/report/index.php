@@ -98,10 +98,11 @@ $columns = [
                 /* 配置分页样式 */
                 'pager' => [
                     'options' => ['class'=>'pagination','style'=>'visibility: visible;'],
-                    'nextPageLabel' => '下一页',
-                    'prevPageLabel' => '上一页',
-                    'firstPageLabel' => '第一页',
-                    'lastPageLabel' => '最后页'
+                    'nextPageLabel' => '>>',
+                    'prevPageLabel' => '<<',
+                    'firstPageLabel' => '首页',
+                    'lastPageLabel' => '尾页',
+                    'maxButtonCount'=> 5
                 ],
                 /* 定义列表格式 */
                 'columns' => $columns,
