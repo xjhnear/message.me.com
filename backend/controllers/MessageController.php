@@ -108,6 +108,7 @@ class MessageController extends BaseController
                     $attributes['message_id'] = $r->message_id;
                     $attributes['message_code'] = $data['message_code'];
                     $attributes['send_time'] = $data['send_time'];
+                    $attributes['create_uid'] = Yii::$app->user->identity->uid;
                     $_model_d = clone $model_d;
                     $this->saveRow($_model_d, $attributes);
                 }
