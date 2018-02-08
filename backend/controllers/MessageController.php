@@ -87,6 +87,8 @@ class MessageController extends BaseController
             $phonenumbers = $data['phonenumbers'];
             $phonenumbers_arr = explode(',',$phonenumbers);
             $data['count'] = count($phonenumbers_arr);
+            $data['create_uid'] = Yii::$app->user->identity->uid;
+            $data['create_name'] = Yii::$app->user->identity->username;
             /* 格式化extend值，为空或数组序列化 */
             if (isset($data['extend'])) {
                 $tmp = FuncHelper::parse_field_attr($data['extend']);
@@ -353,7 +355,7 @@ class MessageController extends BaseController
         return $data;
     }
 
-    public function getUpdateRedis()
+    public function actionUpdateRedis()
     {
         set_time_limit(0);
         ini_set("memory_limit", "1024M");
