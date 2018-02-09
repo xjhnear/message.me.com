@@ -68,7 +68,7 @@ class ReportSearch extends Report
         $query->andFilterWhere([
             'uid' => Yii::$app->user->identity->uid,
         ]);
-        
+
         /* 基本搜索 */
         $query->andFilterWhere([
             'c_date' => $this->c_date,
