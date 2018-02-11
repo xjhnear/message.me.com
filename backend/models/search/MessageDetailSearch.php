@@ -23,7 +23,7 @@ class MessageDetailSearch extends MessageDetail
     public function rules()
     {
         return [
-            [['message_id', 'send_time', 'return_time', 'status', 'create_uid'], 'integer'],
+            [['message_id', 'send_time', 'return_time', 'status', 'create_uid', 'operator'], 'integer'],
             [['phonenumber', 'message_code'], 'string']
         ];
     }
@@ -71,7 +71,15 @@ class MessageDetailSearch extends MessageDetail
 
         /* 基本搜索 */
         $query->andFilterWhere([
+            'message_id' => $params['pid'],
+        ]);
+
+        $query->andFilterWhere([
             'status' => $this->status,
+        ]);
+
+        $query->andFilterWhere([
+            'operator' => $this->operator,
         ]);
 
         /* 商品名 */
