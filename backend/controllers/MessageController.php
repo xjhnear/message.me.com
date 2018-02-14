@@ -84,6 +84,11 @@ class MessageController extends BaseController
             $data = Yii::$app->request->post('Message');
             $data['message_code'] = 'M'.time();
             $data['send_time'] = strtotime($data['send_time']);
+            $content = array();
+            $content['unicom'] = $data['content'];
+            $content['mobile'] = $data['content1'];unset($data['content1']);
+            $content['telecom'] = $data['content2'];unset($data['content2']);
+            $data['content'] = json_encode($content);
             $phonenumbers = $data['phonenumbers_json'];
             $phonenumbers_arr = json_decode($phonenumbers, true);
             $phone_number_show = array_merge($phonenumbers_arr['unicom'],$phonenumbers_arr['mobile'],$phonenumbers_arr['telecom'],$phonenumbers_arr['other']);

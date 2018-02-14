@@ -49,8 +49,18 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
         </div>
 
         <div class="form-group field-message-content">
-            <div><label class="" for="message-content">短信内容</label><span class="help-inline"></span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="5" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline">（联通）</span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="5" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count">0</span> 个文字</div>
+        </div>
+
+        <div class="form-group field-message-content">
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline">（移动）*为空默认同联通</span></div><textarea id="message-content1" class="form-control c-md-7" name="Message[content1]" rows="5" onkeyup="checkLen1(this)"><?=$model->content ?></textarea><span class="help-block"></span>
+            <div class="help-inline">您已经输入 <span id="count1">0</span> 个文字</div>
+        </div>
+
+        <div class="form-group field-message-content">
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline">（电信）*为空默认同联通</span></div><textarea id="message-content2" class="form-control c-md-7" name="Message[content2]" rows="5" onkeyup="checkLen2(this)"><?=$model->content ?></textarea><span class="help-block"></span>
+            <div class="help-inline">您已经输入 <span id="count2">0</span> 个文字</div>
         </div>
 
         <?=$form->field($model, 'send_time')->widget(\kartik\widgets\DateTimePicker::classname(),[
@@ -88,6 +98,8 @@ $(function() {
     /* 子导航高亮 */
     highlight_subnav('message/add');
     checkLen(document.getElementById("message-content"))
+    checkLen1(document.getElementById("message-content1"))
+    checkLen2(document.getElementById("message-content2"))
 });
 
 // 短信内容字数统计
@@ -95,6 +107,16 @@ function checkLen(obj)
 {
     var curr = obj.value.length;
     document.getElementById("count").innerHTML = curr.toString();
+}
+function checkLen1(obj)
+{
+var curr = obj.value.length;
+document.getElementById("count1").innerHTML = curr.toString();
+}
+function checkLen2(obj)
+{
+var curr = obj.value.length;
+document.getElementById("count2").innerHTML = curr.toString();
 }
 
 // 定义的热点被单击则打开文件选择框
