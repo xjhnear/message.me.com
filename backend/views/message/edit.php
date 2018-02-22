@@ -37,18 +37,18 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
         ]); ?>
 
         <div class="form-group field-message-phonenumbers" style="height: 200px;">
-        <div style="width: 40%;float: left;">
-            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-5" name="Message[phonenumbers]" rows="6"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
-            <input id="message-phonenumbers_json" type="hidden" name="Message[phonenumbers_json]" value="<?=$model->phonenumbers_json ?>">
-            <div style="margin-bottom:5px;">
+            <div style="margin-top:10px;margin-bottom:10px;">
                 <span class="btn red btn-outline btn-file">
                     <span id="fileup" class="fileinput-new"> 上传文件 </span>
-                    <input id="fileUpload" type="file" name="fileUpload" style="display: none" onchange="ajaxUploadFile()" />
+                    <input id="fileUpload" type="file" name="fileUpload" style="display: none" onchange="ajaxUploadFile()" accept="text/plain,.csv" />
                 </span>
             </div>
+        <div style="width: 25%;float: left;">
+            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-9" name="Message[phonenumbers]" rows="6"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
+            <input id="message-phonenumbers_json" type="hidden" name="Message[phonenumbers_json]" value="<?=$model->phonenumbers_json ?>">
         </div>
-        <div style="width: 60%;float: left;">
-            <div><label class="" for="message-content">短信内容</label><span class="help-inline"></span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="2" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
+        <div style="width: 75%;float: left;">
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline"></span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="5" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count">0</span> 个文字</div>
         </div>
         </div>
