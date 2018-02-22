@@ -36,8 +36,9 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
             ]
         ]); ?>
 
-        <div class="form-group field-message-phonenumbers">
-            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-7" name="Message[phonenumbers]" rows="5"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
+        <div class="form-group field-message-phonenumbers" style="height: 200px;">
+        <div style="width: 40%;float: left;">
+            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-4" name="Message[phonenumbers]" rows="6"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
             <input id="message-phonenumbers_json" type="hidden" name="Message[phonenumbers_json]" value="<?=$model->phonenumbers_json ?>">
             <div style="margin-bottom:5px;">
                 <span class="btn red btn-outline btn-file">
@@ -47,18 +48,21 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
                 <div class="help-inline" id="phone_msg" style="display: none;">共导入 <span id="phone_count">0</span> 个号码 (联通: <span id="phone_count_unicom">0</span> 个 移动: <span id="phone_count_mobile">0</span> 个 电信: <span id="phone_count_telecom">0</span> 个)</div>
             </div>
         </div>
-
-        <div class="form-group field-message-content">
-            <div><label class="" for="message-content">短信内容</label><span class="help-inline">（联通）</span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="5" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
+        <div style="width: 60%;float: left;">
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline">（联通）</span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="2" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count">0</span> 个文字</div>
         </div>
-
+        </div>
         <div class="form-group field-message-content">
+
+        </div>
+
+        <div class="form-group field-message-content" style="display: none" >
             <div><label class="" for="message-content">短信内容</label><span class="help-inline">（移动）*为空默认同联通</span></div><textarea id="message-content1" class="form-control c-md-7" name="Message[content1]" rows="5" onkeyup="checkLen1(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count1">0</span> 个文字</div>
         </div>
 
-        <div class="form-group field-message-content">
+        <div class="form-group field-message-content" style="display: none" >
             <div><label class="" for="message-content">短信内容</label><span class="help-inline">（电信）*为空默认同联通</span></div><textarea id="message-content2" class="form-control c-md-7" name="Message[content2]" rows="5" onkeyup="checkLen2(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count2">0</span> 个文字</div>
         </div>
@@ -155,6 +159,7 @@ function ajaxUploadFile()
     success: function (data) {
     if (data.state) {
     //上传成功
+    data.phone = data.phone.replace(/,/g,",\n");
     document.getElementById("message-phonenumbers").innerHTML = data.phone;
     document.getElementById("phone_count").innerHTML = data.phone_count.all;
     document.getElementById("phone_count_unicom").innerHTML = data.phone_count.unicom;
