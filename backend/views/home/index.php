@@ -14,7 +14,7 @@ $this->params['title_sub'] = '';
 
 <div class="note note-info">
     <h4> 欢迎使用短信系统！</h4>
-    您的账户尚有余额：<b <?php if($dataProvider['balance'] <= 100){?> style="color: #ff4757" <?php }else{ ?> style="color: #4c9bff"<?php } ?>><?=$dataProvider['balance']?></b> 元
+    您的账户尚有余额：<b <?php if($dataProvider['balance'] <= 100){?> style="color: #e7505a" <?php }else{ ?> style="color: #3598dc"<?php } ?>><?=$dataProvider['balance']?></b> 元
 </div>
 
 <div class="row">

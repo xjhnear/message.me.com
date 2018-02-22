@@ -38,23 +38,26 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
 
         <div class="form-group field-message-phonenumbers" style="height: 200px;">
         <div style="width: 40%;float: left;">
-            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-4" name="Message[phonenumbers]" rows="6"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
+            <div><label class="" for="message-phonenumbers">手机号码</label><span class="help-inline">（多个号码之间","隔开）</span></div><textarea id="message-phonenumbers" class="form-control c-md-5" name="Message[phonenumbers]" rows="6"><?=$model->phonenumbers ?></textarea><span class="help-block"></span>
             <input id="message-phonenumbers_json" type="hidden" name="Message[phonenumbers_json]" value="<?=$model->phonenumbers_json ?>">
             <div style="margin-bottom:5px;">
                 <span class="btn red btn-outline btn-file">
                     <span id="fileup" class="fileinput-new"> 上传文件 </span>
                     <input id="fileUpload" type="file" name="fileUpload" style="display: none" onchange="ajaxUploadFile()" />
                 </span>
-                <div class="help-inline" id="phone_msg" style="display: none;">共导入 <span id="phone_count">0</span> 个号码 (联通: <span id="phone_count_unicom">0</span> 个 移动: <span id="phone_count_mobile">0</span> 个 电信: <span id="phone_count_telecom">0</span> 个)</div>
             </div>
         </div>
         <div style="width: 60%;float: left;">
-            <div><label class="" for="message-content">短信内容</label><span class="help-inline">（联通）</span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="2" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
+            <div><label class="" for="message-content">短信内容</label><span class="help-inline"></span></div><textarea id="message-content" class="form-control c-md-7" name="Message[content]" rows="2" onkeyup="checkLen(this)"><?=$model->content ?></textarea><span class="help-block"></span>
             <div class="help-inline">您已经输入 <span id="count">0</span> 个文字</div>
         </div>
         </div>
         <div class="form-group field-message-content">
-
+            <input type="hidden" id="rest" value="<?=$data["rest"] ?>">
+            <div class="help-inline" id="phone_msg" style="display: none;">
+                共导入 <span id="phone_count">0</span> 个号码 (联通: <span id="phone_count_unicom">0</span> 个 移动: <span id="phone_count_mobile">0</span> 个 电信: <span id="phone_count_telecom">0</span> 个)
+                <b id="rest_error" style="display: none;color: #e7505a;padding-left: 21px;"> * 您目前的余额只能发送 <span id="phone_rest"><?=$data["rest"] ?></span> 个号码</b>
+            </div>
         </div>
 
         <div class="form-group field-message-content" style="display: none" >
@@ -79,7 +82,7 @@ $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以�
         ],['class' => 'c-md-2'])->label('发送时间')->hint('')?>
         
         <div class="form-actions">
-            <?= Html::submitButton('<i class="icon-ok"></i> 提交', ['class' => 'btn blue ajax-post','target-form'=>'form-aaa']) ?>
+            <?= Html::submitButton('<i class="icon-ok"></i> 提交', ['id' => 'sub','class' => 'btn blue ajax-post','target-form'=>'form-aaa']) ?>
             <?= Html::button('取消', ['class' => 'btn','onclick'=>'JavaScript:history.go(-1)']) ?>
         </div>
         
@@ -167,6 +170,12 @@ function ajaxUploadFile()
     document.getElementById("phone_count_telecom").innerHTML = data.phone_count.telecom;
     document.getElementById("message-phonenumbers_json").value = data.phone_json;
     $("#phone_msg").show();
+    if (data.phone_count.all > $('#rest').val()) {
+        $("#rest_error").show();
+        $("#sub").attr("disabled", true);
+    } else {
+        $("#sub").attr("disabled", false);
+    }
     $('form')[0].reset();
     } else {
     alert(data.msg);

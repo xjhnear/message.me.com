@@ -161,12 +161,15 @@ class MessageController extends BaseController
                 $this->error('操作错误');
             }
         }
-
+        $data['balance'] = Yii::$app->user->identity->balance;
+        $data['coefficient'] = Yii::$app->user->identity->coefficient;
+        $data['rest'] = floor($data['balance']/$data['coefficient']);
         /* 获取模型默认数据 */
         $model->loadDefaultValues();
         /* 渲染模板 */
         return $this->render('edit', [
             'model' => $model,
+            'data' => $data,
         ]);
     }
 
