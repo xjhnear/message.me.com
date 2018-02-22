@@ -12,7 +12,11 @@ class HomeController extends BaseController
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $dataProvider['balance'] = Yii::$app->user->identity->balance;
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
 }
