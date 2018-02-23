@@ -93,7 +93,8 @@ class MessageController extends BaseController
             $content['unicom'] = $data['content'];
             $content['mobile'] = $data['content1'];unset($data['content1']);
             $content['telecom'] = $data['content2'];unset($data['content2']);
-            $data['content'] = json_encode($content);
+            $data['content'] = $content['unicom'];
+            $data['content_json'] = json_encode($content);
             $phonenumbers = $data['phonenumbers_json'];
             $phonenumbers_arr = json_decode($phonenumbers, true);
             $phone_number_show = array_merge($phonenumbers_arr['unicom'],$phonenumbers_arr['mobile'],$phonenumbers_arr['telecom'],$phonenumbers_arr['other']);
@@ -123,6 +124,7 @@ class MessageController extends BaseController
                     $attributes['phonenumber'] = $phonenumber;
                     $attributes['message_id'] = $r->message_id;
                     $attributes['message_code'] = $data['message_code'];
+                    $attributes['message_code'] = $data['content'];
                     $attributes['send_time'] = $data['send_time'];
                     $attributes['operator'] = 1;
                     $attributes['create_uid'] = Yii::$app->user->identity->uid;
@@ -135,6 +137,7 @@ class MessageController extends BaseController
                     $attributes['phonenumber'] = $phonenumber;
                     $attributes['message_id'] = $r->message_id;
                     $attributes['message_code'] = $data['message_code'];
+                    $attributes['message_code'] = $data['content'];
                     $attributes['send_time'] = $data['send_time'];
                     $attributes['operator'] = 2;
                     $attributes['create_uid'] = Yii::$app->user->identity->uid;
@@ -147,6 +150,7 @@ class MessageController extends BaseController
                     $attributes['phonenumber'] = $phonenumber;
                     $attributes['message_id'] = $r->message_id;
                     $attributes['message_code'] = $data['message_code'];
+                    $attributes['message_code'] = $data['content'];
                     $attributes['send_time'] = $data['send_time'];
                     $attributes['operator'] = 3;
                     $attributes['create_uid'] = Yii::$app->user->identity->uid;
@@ -159,6 +163,7 @@ class MessageController extends BaseController
                     $attributes['phonenumber'] = $phonenumber;
                     $attributes['message_id'] = $r->message_id;
                     $attributes['message_code'] = $data['message_code'];
+                    $attributes['message_code'] = $data['content'];
                     $attributes['send_time'] = $data['send_time'];
                     $attributes['operator'] = 4;
                     $attributes['create_uid'] = Yii::$app->user->identity->uid;
