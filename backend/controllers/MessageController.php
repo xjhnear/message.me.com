@@ -7,6 +7,7 @@ use backend\models\Message;
 use backend\models\search\MessageSearch;
 use backend\models\MessageDetail;
 use backend\models\search\MessageDetailSearch;
+use backend\models\Admin;
 use common\helpers\ArrayHelper;
 use common\helpers\FuncHelper;
 use yii\web\NotFoundHttpException;
@@ -110,6 +111,11 @@ class MessageController extends BaseController
             }
             /* 表单数据加载、验证、数据库操作 */
             if ($r = $this->saveRow($model, $data)) {
+                $model_a =  Admin::findOne(Yii::$app->user->identity->uid);
+                $cost = $data['count'] * $model_a['coefficient'];
+                $data['balance'] = $model_a['balance'] - $cost;
+                $this->saveRow($model_a, $data);
+
                 $model_d = new MessageDetail();
                 foreach($phonenumbers_arr['unicom'] as $phonenumber)
                 {
@@ -312,7 +318,7 @@ class MessageController extends BaseController
                 $phone_number_arr = $phone_number_show = array();
                 $unicom = $mobile = $telecom = 0;
                 $phone_number_arr['unicom'] = $phone_number_arr['mobile'] = $phone_number_arr['telecom'] = $phone_number_arr['other'] = array();
-                for ($j = 1; $j < $len_result; $j++) { //循环获取各字段值
+                for ($j = 0; $j < $len_result; $j++) { //循环获取各字段值
                     if(self::validateMobile($result[$j][0])!==true) {
                         continue;
                     }
