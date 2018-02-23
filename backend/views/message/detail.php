@@ -99,29 +99,32 @@ $columns = [
             <?php echo $this->render('_search_detail', ['model' => $searchModel]); ?> <!-- 条件搜索-->
         </div>
         <div class="table-container">
+            发送成功 <b><?=$dataCount['success'] ?></b> 条 | 发送失败 <b><?=$dataCount['fail'] ?></b> 条 | 发送中 <b><?=$dataCount['wait'] ?></b> 条
+        </div>
+        <div class="table-container">
             <form class="ids">
-            <?= GridView::widget([
-                'dataProvider' => $dataProvider, // 列表数据
-                'filterModel' => $searchModel, // 搜索模型
-                'options' => ['class' => 'grid-view table-scrollable'],
-                /* 表格配置 */
-                'tableOptions' => ['class' => 'table table-striped table-bordered table-hover table-checkable order-column dataTable no-footer'],
-                /* 重新排版 摘要、表格、分页 */
-                'layout' => '{items}<div class=""><div class="col-md-5 col-sm-5">{summary}</div><div class="col-md-7 col-sm-7"><div class="dataTables_paginate paging_bootstrap_full_number" style="text-align:right;">{pager}</div></div></div>',
-                /* 配置摘要 */
-                'summaryOptions' => ['class' => 'pagination'],
-                /* 配置分页样式 */
-                'pager' => [
-                    'options' => ['class'=>'pagination','style'=>'visibility: visible;'],
-                    'nextPageLabel' => '>>',
-                    'prevPageLabel' => '<<',
-                    'firstPageLabel' => '首页',
-                    'lastPageLabel' => '尾页',
-                    'maxButtonCount'=> 5
-                ],
-                /* 定义列表格式 */
-                'columns' => $columns,
-            ]); ?>
+                <?= GridView::widget([
+                    'dataProvider' => $dataProvider, // 列表数据
+                    'filterModel' => $searchModel, // 搜索模型
+                    'options' => ['class' => 'grid-view table-scrollable'],
+                    /* 表格配置 */
+                    'tableOptions' => ['class' => 'table table-striped table-bordered table-hover table-checkable order-column dataTable no-footer'],
+                    /* 重新排版 摘要、表格、分页 */
+                    'layout' => '{items}<div class=""><div class="col-md-5 col-sm-5">{summary}</div><div class="col-md-7 col-sm-7"><div class="dataTables_paginate paging_bootstrap_full_number" style="text-align:right;">{pager}</div></div></div>',
+                    /* 配置摘要 */
+                    'summaryOptions' => ['class' => 'pagination'],
+                    /* 配置分页样式 */
+                    'pager' => [
+                        'options' => ['class'=>'pagination','style'=>'visibility: visible;'],
+                        'nextPageLabel' => '>>',
+                        'prevPageLabel' => '<<',
+                        'firstPageLabel' => '首页',
+                        'lastPageLabel' => '尾页',
+                        'maxButtonCount'=> 5
+                    ],
+                    /* 定义列表格式 */
+                    'columns' => $columns,
+                ]); ?>
             </form>
         </div>
         <?php \yii\widgets\Pjax::end(); ?>
@@ -132,7 +135,7 @@ $columns = [
 <!-- 定义数据块 -->
 <?php $this->beginBlock('test'); ?>
 jQuery(document).ready(function() {
-    highlight_subnav('message/index'); //子导航高亮
+highlight_subnav('message/index'); //子导航高亮
 });
 <?php $this->endBlock() ?>
 <!-- 将数据块 注入到视图中的某个位置 -->

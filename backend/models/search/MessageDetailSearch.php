@@ -47,7 +47,7 @@ class MessageDetailSearch extends MessageDetail
     public function search($params)
     {
         //$params = $params ? : Yii::$app->request->getQueryParams();
-        
+
         $query = MessageDetail::find()->orderBy('message_did DESC')->asArray();
 
         $dataProvider = new ActiveDataProvider([
@@ -99,7 +99,7 @@ class MessageDetailSearch extends MessageDetail
         if($this->from_date !='' && $this->to_date != '') {
             $query->andFilterWhere(['between', 'create_time', strtotime($this->from_date), strtotime($this->to_date)]);
         }
-        
+
         /* 排序 */
         $query->orderBy([
             'message_did' => SORT_DESC,
@@ -107,4 +107,23 @@ class MessageDetailSearch extends MessageDetail
 
         return $dataProvider;
     }
+
+    public function getWaitCount($message_id)
+    {
+        $count = MessageDetail::find()->andFilterWhere(['message_id' => $message_id,'status' => 5])->count();
+        return $count;
+    }
+
+    public function getSuccessCount($message_id)
+    {
+        $count = MessageDetail::find()->andFilterWhere(['message_id' => $message_id,'status' => 3])->count();
+        return $count;
+    }
+
+    public function getfailCount($message_id)
+    {
+        $count = MessageDetail::find()->andFilterWhere(['message_id' => $message_id,'status' => 4])->count();
+        return $count;
+    }
+
 }
