@@ -25,7 +25,7 @@ $this->params['title_sub'] = '';
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="1349">500</span>
+                    <span data-counter="counterup" data-value=""><?=$dataProvider['subtotal_today']?></span>
                 </div>
                 <div class="desc"> 今日已发短信 </div>
             </div>
@@ -38,7 +38,7 @@ $this->params['title_sub'] = '';
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="12,5"></span>100%</div>
+                    <span data-counter="counterup" data-value=""></span><?=$dataProvider['subtotal_today_per']?>%</div>
                 <div class="desc"> 今日短信成功率 </div>
             </div>
         </a>
@@ -50,7 +50,7 @@ $this->params['title_sub'] = '';
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="549">50000</span>
+                    <span data-counter="counterup" data-value=""><?=$dataProvider['subtotal_thismonth']?></span>
                 </div>
                 <div class="desc"> 本月已发短信 </div>
             </div>
@@ -63,7 +63,7 @@ $this->params['title_sub'] = '';
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="89"></span>98%</div>
+                    <span data-counter="counterup" data-value=""></span><?=$dataProvider['subtotal_thismonth_per']?>%</div>
                 <div class="desc"> 本月短信成功率 </div>
             </div>
         </a>

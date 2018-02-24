@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2018-02-23 15:10:08
+Date: 2018-02-24 17:55:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,5 +31,22 @@ CREATE TABLE `yii2_message_send` (
   `return_time` int(10) DEFAULT NULL COMMENT '回执时间',
   `errorcode` varchar(50) DEFAULT NULL COMMENT '上级网关返回值',
   `extno` int(10) DEFAULT NULL,
+  `create_time` int(10) NOT NULL COMMENT '创建时间',
+  `uid` int(8) NOT NULL COMMENT '用户ID',
   PRIMARY KEY (`message_sid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=58361 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of yii2_message_send
+-- ----------------------------
+INSERT INTO `yii2_message_send` VALUES ('58350', '19', '6176', '13611628132', '8236038', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58351', '19', '6175', '13917438216', '8236038', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58352', '19', '6176', '13611628132', '8236039', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58353', '19', '6175', '13917438216', '8236039', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58354', '19', '6176', '13611628132', '8236041', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58355', '19', '6175', '13917438216', '8236041', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58356', '19', '6176', '13611628132', '8236042', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58357', '19', '6175', '13917438216', '8236042', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58358', '20', '6177', '13916058395', '8238287', '2', '2', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58359', '21', '6178', '18621980140', '8238298', '1', '1', '0', null, null, null, '0', '0');
+INSERT INTO `yii2_message_send` VALUES ('58360', '22', '6180', '18621980140', '8238315', '1', '1', '0', null, null, null, '0', '0');
