@@ -41,7 +41,7 @@ $this->beginPage();
                 <h3 class="form-title font-green">短信管理平台</h3>
                 <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
-                    <span> 用户名或密码错误 </span>
+                    <span> 登录失败 </span>
                 </div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
