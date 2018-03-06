@@ -99,6 +99,15 @@ class MessageController extends BaseController
                 $data['send_time'] = time();
             }
             $content = array();
+            $message_count = $data['message_count'];unset($data['message_count']);
+            $power = 1;
+            if ($data['message_count'] > 130) {
+                $power = 3;
+            } elseif ($data['message_count'] > 70) {
+                $power = 2;
+            } else {
+                $power = 1;
+            }
             $content['unicom'] = $data['content'];
             $content['mobile'] = $data['content1'];unset($data['content1']);
             $content['telecom'] = $data['content2'];unset($data['content2']);
@@ -162,7 +171,8 @@ class MessageController extends BaseController
                 $phonenumbers_arr = $phone_number_arr;
             }
             $data['count'] = count($phone_number_show);
-            if ($data['count'] > $rest) {
+            $cost = $data['count'] * $power;
+            if ($cost > $rest) {
                 $this->error('您目前的余额只能发送'.$rest.'个号码');
             }
             $data['create_uid'] = Yii::$app->user->identity->uid;
@@ -179,7 +189,6 @@ class MessageController extends BaseController
             /* 表单数据加载、验证、数据库操作 */
             if ($r = $this->saveRow($model, $data)) {
                 $model_a =  Admin::findOne(Yii::$app->user->identity->uid);
-                $cost = $data['count'];
                 $data['balance'] = $model_a['balance'] - $cost;
                 Yii::$app->user->identity->balance = $data['balance'];
                 $this->saveRow($model_a, $data);
