@@ -3,13 +3,13 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-/* @var $model common\modelsgii\Report */
+/* @var $model common\modelsgii\Message */
 /* @var $dataProvider yii\data\ActiveDataProvider  */
-/* @var $searchModel backend\models\search\ReportSearch */
+/* @var $searchModel backend\models\search\MessageDetailSearch */
 
 /* ===========================以下为本页配置信息================================= */
 /* 页面基本属性 */
-$this->title = '每日清单';
+$this->title = '回复管理';
 $this->params['title_sub'] = '';  // 在\yii\base\View中有$params这个可以在视图模板中共享的参数
 
 /* 先要注册表格所须的资源 */
@@ -25,31 +25,31 @@ $columns = [
         }
     ],
     [
-        'header' => 'ID',
-        'value' => 'report_id',
-        'options' => ['width' => '50px;']
+        'header' => '手机号',
+        'value' => 'phonenumber',
+        'options' => ['width' => '50px;'],
     ],
     [
-        'header' => '时间',
-        'value' => 'c_date',
-        'format' => ['date', 'php:Y-m-d'],
-        'options' => ['width' => '100px;'],
+        'header' => '发送批次号',
+        'value' => 'task_id',
+        'options' => ['width' => '50px;'],
     ],
     [
-        'header' => '发送数量',
-        'value' => 'send_count',
-        'options' => ['width' => '50px;']
-    ],
-    [
-        'header' => '发送成功数量',
-        'value' => 'success_count',
-        'options' => ['width' => '50px;']
-    ],
-    [
-        'label' => '创建时间',
-        'value' => 'create_time',
+        'header' => '回复内容',
+        'value' => 'content',
         'options' => ['width' => '150px;'],
-        'format' =>  ['date', 'php:Y-m-d H:i:s']
+    ],
+    [
+        'header' => '回复时间',
+        'value' => 'return_time',
+        'format' => ['date', 'php:Y-m-d H:i:s'],
+        'options' => ['width' => '150px;'],
+    ],
+    [
+        'header' => '创建时间',
+        'value' => 'create_time',
+        'format' => ['date', 'php:Y-m-d H:i:s'],
+        'options' => ['width' => '150px;'],
     ],
 ];
 
@@ -59,18 +59,18 @@ $columns = [
     <div class="portlet-title">
         <div class="caption">
             <i class="icon-settings font-dark"></i>
-            <span class="caption-subject font-dark sbold uppercase">短信列表</span>
+            <span class="caption-subject font-dark sbold uppercase">回复列表</span>
         </div>
         <div class="actions">
             <div class="btn-group btn-group-devided">
-                <?=Html::a('清空搜索 <i class="fa fa-times"></i>',['report/index'],['class'=>'btn green','style'=>'margin-right:10px;'])?>
+                <?=Html::a('清空搜索 <i class="fa fa-times"></i>',['message/call'],['class'=>'btn green','style'=>'margin-right:10px;'])?>
             </div>
         </div>
     </div>
     <div class="portlet-body">
         <?php \yii\widgets\Pjax::begin(['options'=>['id'=>'pjax-container']]); ?>
         <div>
-            <?php //echo $this->render('_search', ['model' => $searchModel]); ?> <!-- 条件搜索-->
+            <?php echo $this->render('_search_call', ['model' => $searchModel]); ?> <!-- 条件搜索-->
         </div>
         <div class="table-container">
             <form class="ids">
@@ -106,7 +106,7 @@ $columns = [
 <!-- 定义数据块 -->
 <?php $this->beginBlock('test'); ?>
 jQuery(document).ready(function() {
-    highlight_subnav('report/index'); //子导航高亮
+    highlight_subnav('message/call'); //子导航高亮
 });
 <?php $this->endBlock() ?>
 <!-- 将数据块 注入到视图中的某个位置 -->
